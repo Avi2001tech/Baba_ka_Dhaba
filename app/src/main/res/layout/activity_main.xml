@@ -7,9 +7,36 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+   <com.google.android.material.appbar.AppBarLayout
+       android:id="@+id/appbar_layout"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+         <androidx.appcompat.widget.Toolbar
+             android:id="@+id/toolbar"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:theme="@style/ThemeOverlay.AppCompat.ActionBar"></androidx.appcompat.widget.Toolbar>
+
+         <TextView
+             android:layout_centerInParent="true"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textSize="22sp"
+             android:textStyle="bold|italic"
+             android:textColor="@color/black"
+             android:text="*͙*❥⃝∗⁎.ʚ Baba ka Dhaba ⁎∗❥⃝**͙"/>
+
+      </RelativeLayout>
+   </com.google.android.material.appbar.AppBarLayout>
+
    <androidx.recyclerview.widget.RecyclerView
        android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       android:id="@+id/food_items"/>
+       android:layout_height="wrap_content"
+       android:id="@+id/recyclerview"
+       tools:listitem="@layout/food_sample"/>
 
 </LinearLayout>
