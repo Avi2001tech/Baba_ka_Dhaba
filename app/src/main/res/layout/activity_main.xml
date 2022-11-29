@@ -19,7 +19,9 @@
              android:id="@+id/toolbar"
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
-             android:theme="@style/ThemeOverlay.AppCompat.ActionBar"></androidx.appcompat.widget.Toolbar>
+             android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+         </androidx.appcompat.widget.Toolbar>
 
          <TextView
              android:layout_centerInParent="true"
