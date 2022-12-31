@@ -1,6 +1,7 @@
 package com.example.babakadhaba.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.babakadhaba.DetailActivity;
 import com.example.babakadhaba.Models.MainModel;
 import com.example.babakadhaba.R;
 
@@ -39,6 +41,18 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.viewholder> {
         holder.foodName.setText(model.getName());
         holder.foodPrice.setText(model.getPrice());
         holder.foodDesc.setText(model.getDescription());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, DetailActivity.class);
+                intent.putExtra("image",model.getImage());
+                intent.putExtra("price",model.getPrice());
+                intent.putExtra("desc",model.getDescription());
+                intent.putExtra("name",model.getName());
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
